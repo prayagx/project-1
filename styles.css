@@ -1,22 +1,41 @@
 body {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background-color: #f4f4f4;
+    background-color: #3498db;
+    font-family: 'Arial', sans-serif;
+}
+
+#start-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#timer {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 20px;
 }
 
 .game-container {
     display: grid;
-    grid-template-columns: repeat(4, 100px); /* Adjust based on the desired grid size */
+    grid-template-columns: repeat(4, 100px);
     grid-gap: 10px;
 }
 
 .card {
     width: 100px;
     height: 100px;
-    background-color: #3498db;
+    background-color: #2ecc71;
     color: #fff;
     display: flex;
     align-items: center;
@@ -24,21 +43,23 @@ body {
     font-size: 1.5rem;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s ease-in-out;
+    position: relative;
 }
 
-.card.flipped {
-    background-color: #2ecc71;
-}
-
-.card.matched {
-    background-color: #e74c3c;
-    pointer-events: none; /* Disable clicking on matched cards */
-}
 .card span {
     display: none;
 }
 
 .card.flipped span {
     display: block;
+}
+
+.card.matched {
+    background-color: #e74c3c;
+    pointer-events: none;
+}
+
+/* Add hover effect for cards */
+.card:hover {
+    background-color: #27ae60;
 }
