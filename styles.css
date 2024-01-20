@@ -35,7 +35,6 @@ body {
     background-color: #e74c3c;
     pointer-events: none; /* Disable clicking on matched cards */
 }
-/* Add the following style to initially hide the text */
 .card span {
     display: none;
 }
